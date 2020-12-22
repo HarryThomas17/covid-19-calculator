@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/covid-19-calculator/static/css/main.ab7136cd.chunk.css",
+    "main.js": "/covid-19-calculator/static/js/main.127fc7cf.chunk.js",
+    "main.js.map": "/covid-19-calculator/static/js/main.127fc7cf.chunk.js.map",
+    "runtime-main.js": "/covid-19-calculator/static/js/runtime-main.270e610f.js",
+    "runtime-main.js.map": "/covid-19-calculator/static/js/runtime-main.270e610f.js.map",
+    "static/js/2.c7c7edcc.chunk.js": "/covid-19-calculator/static/js/2.c7c7edcc.chunk.js",
+    "static/js/2.c7c7edcc.chunk.js.map": "/covid-19-calculator/static/js/2.c7c7edcc.chunk.js.map",
+    "static/js/3.8f112bf6.chunk.js": "/covid-19-calculator/static/js/3.8f112bf6.chunk.js",
+    "static/js/3.8f112bf6.chunk.js.map": "/covid-19-calculator/static/js/3.8f112bf6.chunk.js.map",
+    "index.html": "/covid-19-calculator/index.html",
+    "static/css/main.ab7136cd.chunk.css.map": "/covid-19-calculator/static/css/main.ab7136cd.chunk.css.map",
+    "static/js/2.c7c7edcc.chunk.js.LICENSE.txt": "/covid-19-calculator/static/js/2.c7c7edcc.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/covid-19-calculator/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.270e610f.js",
+    "static/js/2.c7c7edcc.chunk.js",
+    "static/css/main.ab7136cd.chunk.css",
+    "static/js/main.127fc7cf.chunk.js"
+  ]
+}
