@@ -1,8 +1,7 @@
-import React from 'react';
-import './App.css';
-import NavBar from './components/navbar.jsx'
-import Form from './Form.js';
-import Risk from './Risk.js';
+import React, { Component } from "react";
+import NavBar from './components/NavBar.js'
+import Form from './components/Form.js';
+import Risk from './components/Risk.js';
 
 const endpoint = (
 'https://api.coronavirus.data.gov.uk/v1/data?' +
@@ -11,7 +10,7 @@ const endpoint = (
 );
 
 
-class App extends React.Component {
+class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -23,12 +22,12 @@ class App extends React.Component {
 
     render() {
       return (
-        <div className="App"> // <React.Fragment> ???
-          <Navbar />
+        <React.Fragment>
+          <NavBar />
           <h1>COVID-19 Risk Calculator</h1>
           <Form updateRisk={this.updateRisk}/>
           <Risk risk={this.state.risk}/>
-        </div>
+        </React.Fragment>
       );
     }
 
