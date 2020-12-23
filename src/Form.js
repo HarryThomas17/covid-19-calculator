@@ -4,7 +4,7 @@ class Form extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            noPeople: null
+            noPeople: 0
         };
 
         this.changeHandler = this.changeHandler.bind(this);
@@ -16,7 +16,7 @@ class Form extends React.Component {
             <form onSubmit={this.submitHandler}>
                 <label>
                     No. of People: 
-                    <input type="number" onChange={this.changeHandler}/>
+                    <input type="number" value={this.state.noPeople} onChange={this.changeHandler}/>
                 </label>
                 <input type="submit" value="Submit"/>
             </form>
@@ -28,7 +28,7 @@ class Form extends React.Component {
     }
 
     submitHandler(event) {
-        this.props.updatePeople(this.state.noPeople);
+        this.props.updateRisk(this.state.noPeople);
         event.preventDefault(); // Prevent default form submit behaviour
     }
 }
