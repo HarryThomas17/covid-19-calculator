@@ -1,11 +1,16 @@
-import './App.css';
+import React, { Component } from "react";
+import NavBar from "./components/navbar";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Hello World!</h1>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <React.Fragment>
+        <NavBar />
+        <h1>Hello World!</h1>
+      </React.Fragment>
+    );
+  }
 }
 
 export default App;
