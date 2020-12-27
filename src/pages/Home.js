@@ -2,11 +2,7 @@ import React, { Component } from "react";
 import Form from './components/Form';
 import Risk from './components/Risk';
 
-const endpoint = (
-'https://api.coronavirus.data.gov.uk/v1/data?' +
-'filters=areaType=nation;areaName=england&' +
-'structure={"date":"date","newCases":"newCasesByPublishDate"}'
-);
+const apiEndpoint = 'https://api.coronavirus.data.gov.uk//v1/data?filters=areaType=overview&structure={"date":"date","areaName":"areaName","newCasesByPublishDate":"newCasesByPublishDate"}';
 
 
 class Home extends Component {
@@ -30,12 +26,14 @@ class Home extends Component {
     }
 
     updateRisk(noPeople) {
-        fetch(endpoint) // TODO calculate this properly
+        fetch(apiEndpoint)
         .then(res => res.json())
         .then(data => {
-            let yesterdayCases = data.data[0].newCases;
-            let population = 68058472;
-            let prob = yesterdayCases / population;
+            let tenDayCaseCount = 0;
+            for (let i = 0; i < 10; i++) {
+                tenDayCaseCount += data.data[i].newCasesByPublishDate;
+            }
+            let prob = tenDayCaseCount / 68058472; // Population of the UK
             let risk = 1.0 - Math.pow(1.0 - prob, noPeople);
             this.setState({risk: risk});
         })
